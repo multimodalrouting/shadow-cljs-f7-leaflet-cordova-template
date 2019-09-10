@@ -17,10 +17,11 @@ import {
   Button
 } from 'framework7-react';
 
+//import { MainPanel } from '../components/re-frame/views';
+
 //const AboutPanel = window.multimodal_re_frame.views.AboutPanel;
 
 export default () => {
-  const AboutPanel = window.multimodal_re_frame.views.react_about_panel;
   const MainPanel = window.multimodal_re_frame.views.react_main_panel;
   return (
   <Page name="home">

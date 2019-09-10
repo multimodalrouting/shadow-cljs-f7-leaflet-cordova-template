@@ -156,6 +156,7 @@ module.exports = {
     ],
   },
   plugins: [
+    new webpack.IgnorePlugin(new RegExp('xmlhttprequest')),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(env),
       'process.env.TARGET': JSON.stringify(target),

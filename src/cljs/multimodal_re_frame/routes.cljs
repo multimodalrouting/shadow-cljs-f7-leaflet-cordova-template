@@ -18,12 +18,20 @@
     (.setEnabled true)))
 
 (defn app-routes []
-  ;;(secretary/set-config! :prefix "#")
+  (secretary/set-config! :prefix "#")
   ;; --------------------
   ;; define routes here
   (defroute "/" []
-    (re-frame/dispatch [::events/set-active-panel :home-panel])
+    (re-frame/dispatch [::events/set-active-panel :saved-routes-page])
     )
+
+  (defroute "/homepanel" []
+            (re-frame/dispatch [::events/set-active-panel :home-panel])
+            )
+
+  (defroute "/edit" []
+            (re-frame/dispatch [::events/set-active-panel :edit-route-panel])
+            )
 
   (defroute "/popup" []
     (re-frame/dispatch [::events/set-active-panel :about-panel]))

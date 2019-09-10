@@ -1,3 +1,58 @@
+
+@import "~leaflet/dist/leaflet.css";
+@import "~bulma/css/bulma.css";
+@import "~bulma-checkradio/dist/css/bulma-checkradio.min.css";
+@import "~@fortawesome/fontawesome-free/less/fontawesome";
+@import "~@fortawesome/fontawesome-free/less/solid";
+@import "~framework7/framework7.bundle.less";
+
+@themeColor: #007aff;
+
+.panel {
+  min-width: 25em;
+  max-width: 90vw;
+}
+
+/* rotuing panel */
+
+.list-input .item-inner {
+
+  padding: 12px 42px 4px 42px;
+
+}
+
+.list-input .waypoint-route-icons {
+
+  position: absolute;
+  height: 29px;
+  padding: 5px 0 0 15px;
+  left: 0;
+  width: 24px;
+
+  .icon {
+    color: var(--f7-color-gray);
+    width: 24px;
+    height: 24px;
+
+
+    &.waypoint-icon {
+      margin-top: 4px;
+      margin-bottom: 1px;
+      margin-left: -4px;
+
+    }
+
+    &.waypoint-connector {
+      position: relative;
+      display: block;
+      height: 32px;
+      top: -8px;
+      left: -10px;
+    }
+  }
+}
+
+
 /* iOS Cordova Tweak */
 .device-cordova.device-ios {
   height: 100vh;

@@ -1,0 +1,105 @@
+body {
+    background-color: #f9f9f6;
+    height: 100vh;
+}
+
+.navbar {
+    z-index: 402;
+}
+
+
+.button-panel {
+    position: absolute;
+    z-index: 401;
+    bottom: 10px;
+    left: 12px;
+}
+
+.units-toggle {
+    position: absolute;
+    z-index: 401;
+    top: 125px;
+    right: 12px;
+}
+
+.units-toggle .button {
+    border: none;
+    box-shadow: none !important;
+}
+
+.units-toggle .button:first-child {
+    border-radius: 4px 0px 0px 4px;
+}
+
+.units-toggle .button:last-child {
+    border-radius: 0px 4px 4px 0px;
+}
+
+.units-toggle .selected {
+    background: #209cee;
+    color: white;
+}
+
+.button-panel button {
+    margin-right: 6px;
+}
+
+.button-panel button[disabled] {
+    background-color: #aca1a19c;
+    opacity: 1;
+}
+
+.modal-card {
+    max-width: 90%;
+}
+
+.saved-route-row {
+    font-size: 1.1em;
+}
+
+.saved-route-row:hover {
+    background-color: #72bcec;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.saved-route-row:hover .delete {
+    display: block;
+}
+
+.saved-route-row .delete {
+    display: none;
+}
+
+.pace-inputs > div {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.pace-inputs .input {
+    width: 70px;
+    font-size: 1.3em;
+}
+
+.pace-inputs label {
+    display: block;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+.panel {
+    background-color: white;
+    max-width: 600px;
+}
+
+.panel-block {
+    padding: 1.2em 1.5em;
+}
+
+.panel-block .table {
+    font-size: 1.1em;
+}
+
+.saved-routes-table {
+    width: 100%;
+}
