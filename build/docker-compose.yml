@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+    base:
+        image: multimodal/cordova
+        build:
+            context: ./docker
+            dockerfile: cordova.dockerfile
+        volumes:
+            - ../:/root/
+        working_dir: /root
+        command:
+          - npm run build-cordova-android-prod-lein
+        restart: "no"

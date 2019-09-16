@@ -55,6 +55,7 @@
     "build-cordova-ios-prod": "cross-env TARGET=cordova cross-env NODE_ENV=production node ./build/build.js && cd cordova && cordova build ios",
     "build-cordova-android-dev": "cross-env TARGET=cordova cross-env NODE_ENV=development node ./build/build.js && cd cordova && cordova build android",
     "build-cordova-android-prod": "cross-env TARGET=cordova cross-env NODE_ENV=production node ./build/build.js && cd cordova && cordova build android",
+    "build-cordova-android-prod-lein": "cross-env TARGET=cordova cross-env NODE_ENV=production lein prod && node ./build/build.js && cd cordova && cordova build android",
     "build-cordova-electron-dev": "cross-env TARGET=cordova cross-env NODE_ENV=development node ./build/build.js && cd cordova && cordova build electron",
     "build-cordova-electron-prod": "cross-env TARGET=cordova cross-env NODE_ENV=production node ./build/build.js && cd cordova && cordova build electron",
     "build-cordova-browser-dev": "cross-env TARGET=cordova cross-env NODE_ENV=development node ./build/build.js && cd cordova && cordova build browser",
@@ -64,7 +65,8 @@
     "dev": "cross-env NODE_ENV=development webpack-dev-server --config ./build/webpack.config.js --host 0.0.0.0",
     "prod": "cross-env NODE_ENV=production webpack-prod-server --config ./build/webpack.config.js",
     "start": "npm run dev",
-    "postinstall": "cpy './node_modules/framework7-icons/fonts/*.*' './src/fonts/'"
+    "postinstall": "cpy './node_modules/framework7-icons/fonts/*.*' './src/fonts/'",
+    "karma-test": "karma start --single-run --reporters junit,dots"
   },
   "browserslist": [
     "Android >= 5",
@@ -116,6 +118,11 @@
     "css-loader": "^3.2.0",
     "file-loader": "^4.2.0",
     "html-webpack-plugin": "^3.2.0",
+    "karma": "4.3.0",
+    "karma-chrome-launcher": "3.1.0",
+    "karma-cli": "^2.0.0",
+    "karma-cljs-test": "0.1.0",
+    "karma-junit-reporter": "^1.2.0",
     "less": "^3.10.3",
     "less-loader": "^5.0.0",
     "mini-css-extract-plugin": "^0.8.0",
@@ -124,16 +131,13 @@
     "postcss-loader": "^3.0.0",
     "postcss-preset-env": "^6.7.0",
     "rimraf": "^3.0.0",
+    "shadow-cljs": "2.8.52",
     "style-loader": "^1.0.0",
     "terser-webpack-plugin": "^2.0.1",
     "url-loader": "^2.1.0",
     "webpack": "^4.39.3",
     "webpack-cli": "^3.3.8",
     "webpack-dev-server": "^3.8.0",
-    "webpack-prod-server": "^1.1.1",
-    "karma": "4.3.0",
-    "karma-chrome-launcher": "3.1.0",
-    "karma-cljs-test": "0.1.0",
-    "shadow-cljs": "2.8.52"
+    "webpack-prod-server": "^1.1.1"
   }
 }

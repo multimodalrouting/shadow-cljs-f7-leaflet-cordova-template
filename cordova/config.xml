@@ -25,23 +25,12 @@
     </platform>
     <plugin name="cordova-plugin-statusbar" spec="^2.4.3" />
     <plugin name="cordova-plugin-keyboard" spec="^1.2.0" />
-    <plugin name="cordova-plugin-splashscreen" spec="^5.0.3" />
     <plugin name="cordova-plugin-wkwebview-file-xhr" spec="^2.1.1" />
     <allow-navigation href="*" />
     <platform name="android">
         <preference name="StatusBarOverlaysWebView" value="false" />
         <preference name="android-minSdkVersion" value="21" />
         <preference name="SplashMaintainAspectRatio" value="true" />
-        <splash density="land-hdpi" src="res/screen/android/drawable-hdpi/screen.png" />
-        <splash density="land-mdpi" src="res/screen/android/drawable-mdpi/screen.png" />
-        <splash density="land-xhdpi" src="res/screen/android/drawable-xhdpi/screen.png" />
-        <splash density="land-xxhdpi" src="res/screen/android/drawable-xxhdpi/screen.png" />
-        <splash density="land-xxxhdpi" src="res/screen/android/drawable-xxxhdpi/screen.png" />
-        <splash density="port-hdpi" src="res/screen/android/drawable-hdpi/screen.png" />
-        <splash density="port-mdpi" src="res/screen/android/drawable-mdpi/screen.png" />
-        <splash density="port-xhdpi" src="res/screen/android/drawable-xhdpi/screen.png" />
-        <splash density="port-xxhdpi" src="res/screen/android/drawable-xxhdpi/screen.png" />
-        <splash density="port-xxxhdpi" src="res/screen/android/drawable-xxxhdpi/screen.png" />
         <icon density="ldpi" src="res/icon/android/mipmap-ldpi/ic_launcher.png" />
         <icon density="mdpi" src="res/icon/android/mipmap-mdpi/ic_launcher.png" />
         <icon density="hdpi" src="res/icon/android/mipmap-hdpi/ic_launcher.png" />
@@ -91,6 +80,7 @@
     <preference name="Allow3DTouchLinkPreview" value="false" />
     <preference name="CordovaWebViewEngine" value="CDVWKWebViewEngine" />
     <preference name="AllowInlineMediaPlayback" value="true" />
-    <engine name="ios" spec="~4.5.5" />
-    <engine name="android" spec="~7.1.4" />
+    <engine name="ios" spec="^4.5.5" />
+    <engine name="browser" spec="^5.0.4" />
+    <engine name="android" spec="^7.1.4" />
 </widget>

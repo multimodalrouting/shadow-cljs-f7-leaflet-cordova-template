@@ -23,6 +23,11 @@ Framework7.use(Framework7React)
 
 import * as F7 from 'framework7-react';
 
+import('../js/cordova-app').then((cordovaApp) => {
+  window.cordovaApp  = cordovaApp;
+    });
+
+
 // Mount React App
 window.App = App;
 window.FontAwesomeIcon = FontAwesomeIcon;

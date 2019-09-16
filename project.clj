@@ -33,17 +33,24 @@
 
   :aliases {"dev"  ["with-profile" "dev" "run" "-m" "shadow.cljs.devtools.cli" "watch" "app"]
             "prod" ["with-profile" "prod" "run" "-m" "shadow.cljs.devtools.cli" "release" "app"]
+            "test3" ["with-profile" "dev" "run" "-m" "shadow.cljs.devtools.cli" "test" "karma-test"]
+            "test1" ["with-profile" "dev" "run" "-m" "shadow.cljs.devtools.cli" "compile" "karma-test"]
+            "test2" ["with-profile" "dev" "run" "-m" "shadow.cljs.devtools.cli" "test" "karma-test"]
+            "npm2" [ "shell" "npm"]
             "build" ["with-profile" "prod" "run" "-m" "shadow.cljs.devtools.cli" "compile" "app"]}
 
   :profiles
   {:dev
-   {:dependencies [[binaryage/devtools "0.9.10"]
+   {
+     :plugins [[lein-shell "0.5.0"]]
+     :dependencies [[binaryage/devtools "0.9.10"]
                    [cider/piggieback "0.4.1"]
                    [day8.re-frame/re-frame-10x "0.4.2"]
                    [cider/cider-nrepl "0.22.2"]
                    [day8.re-frame/tracing "0.5.3"]]}
 
-   :prod { :dependencies [[day8.re-frame/re-frame-10x "0.4.2"]
-                          [day8.re-frame/tracing "0.5.3"]
+   :prod {
+           :dependencies [[day8.re-frame/re-frame-10x "0.4.2"]
+                          [day8.re-frame/tracing-stubs "0.5.3"]
                            ]}
    })

@@ -67,15 +67,15 @@
            {:class "waypoint-route-icons" :slot "inner-start"}
            [:i {:icon ["fa" "dot-circle"] :class "fa fa-dot-circle fa-xs waypoint-icon icon" :size "xs"}]
            [:> (fontawesomeicon) {:icon ["fac" "directions"] :className "waypoint-connector icon" :size "1x"}]]]))
-     ;[:>
-     ; (listinput)
-     ; {:type        "text"
-     ;  :className   "list-input"
-     ;  :clearButton true
-     ;  :placeholder "type destination point or click on map"}
-     ; [:div
-     ;  {:class "waypoint-route-icons" :slot "inner-start"}
-     ;  [:i {:class "fa fa-s fa-map-marker-alt waypoint-icon icon"}]]]
+     [:>
+      (listinput)
+      {:type        "text"
+       :className   "list-input"
+       :clearButton true
+       :placeholder "type destination point or click on map"}
+      [:div
+       {:class "waypoint-route-icons" :slot "inner-start"}
+       [:i {:class "fa fa-s fa-map-marker-alt waypoint-icon icon"}]]]
      ]]])
 
 

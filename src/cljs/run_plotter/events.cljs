@@ -47,20 +47,30 @@
     (drop-index (concat (take to sequence) [(get sequence from)] (drop to sequence))  (+ from posPlus))))
 
 
+
+(defn move
+  "move an item of a list at position  `from` to position  `to`"
+  [list from to]
+  (let [v (into [] list)
+        r (into (subvec v 0 from)
+                (subvec v (inc from)))]
+       (concat (subvec r 0 to)
+               [(get v from)]
+               (subvec r (inc to)))))
+
+
 (rf/reg-event-fx
  :route-order-change
  ;(undo/undoable "change waypoint order")
  (fn [{:keys [db]} [_ from to]]
    (let [ waypoints (get-in db [:route :waypointTexts])
-          new-waypoints (exchange-items waypoints from to)
+          new-waypoints (move (apply vector waypoints) from to)
           co-ords (get-in db [:route :co-ords])]
+
      {:db (-> db
-              (println new-waypoints)
               (assoc-in [:route :waypointTexts] new-waypoints)
               ;(assoc-in [:route :co-ords] (exchange-items co-ords from to))
-              )}
-     )
-   ))
+              )})))
 
 (rf/reg-event-fx
  :recalculate-waypoints
