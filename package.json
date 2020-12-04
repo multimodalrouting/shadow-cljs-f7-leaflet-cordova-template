@@ -90,7 +90,7 @@
     "framework7": "^4.5.0",
     "framework7-icons": "^2.3.1",
     "framework7-react": "^4.5.0",
-    "highlight.js": "^9.15.8",
+    "highlight.js": "^10.4.1",
     "leaflet": "^1.5.1",
     "leaflet-polylinedecorator": "^1.6.0",
     "leaflet.icon.glyph": "^0.2.1",
